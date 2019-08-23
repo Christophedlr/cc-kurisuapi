@@ -48,4 +48,10 @@ function write(string, color, monitor, posX, posY)
 	end
 end
 
+-- Write text in scren or monitor screen with new line
+function writeln(string, color, monitor, posX, posY)
+	write(string, color, monitor, posX, posY)
+	write("", color, monitor, 1, posY+1)
+end
+
 clear = clrscr
